@@ -1,0 +1,19 @@
+{
+    "test_login": {
+        "url": "http://192.168.3.18:30236/auth/login/",
+        "json": {"username": "10086", "password": "rootroot"},
+        "method": "post",
+        
+        "assert": {
+            "code":200,
+            "role": "super_admin",
+            "username": "10086"
+
+          
+        },
+      
+        "desc": "测试企业6登录"
+    }
+
+ 
+}
