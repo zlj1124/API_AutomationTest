@@ -39,7 +39,14 @@ class HttpHandler(GetDictParam):
       
         self.session = SESSION
         self.body = request_bodys
-        response=requests.post(url='http://192.168.3.21:30366/auth/login/',json= {"username": "13911223344", "password": "13911223344"})
+        #获取token
+        with open('./cases/test_kzhd_login.json','r',encoding='utf8')as fp:
+            json_data = json.load(fp)
+            url=json_data['test_login']['url']
+            username=json_data['test_login']['json']['username']
+            password=json_data['test_login']['json']['password']
+     
+        response=requests.post(url=url,json= {"username": username, "password": password})
         self.token="JWT " + response.json()['data']["token"]
         # logger.info("JWT " + response.json()["token"])
 
