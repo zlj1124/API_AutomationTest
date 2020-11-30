@@ -1,0 +1,19 @@
+{
+    "test_login": {
+        "url": "http://192.168.3.21:30366/auth/login/",
+        "json": {"username": "13911223344", "password": "13911223344"},
+        "method": "post",
+        
+        "assert": {
+            "code":200,
+            "role": "partnerstaff",
+            "username": "13911223344"
+
+          
+        },
+      
+        "desc": "快召登录"
+    }
+
+ 
+}

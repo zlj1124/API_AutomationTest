@@ -17,6 +17,7 @@ from src.lib.BeautifulReport import BeautifulReport
 from src.lib import CreateCases
 from src.lib import Mail
 from db.db_dump import BackMysql
+bt=BackMysql()
 
 @click.command()
 @click.option('--cases', default='src/testcases/', help="case file path")
@@ -26,18 +27,18 @@ from db.db_dump import BackMysql
         default='src/report/',
         help="generator report in path")
 def run(cases, pattern, report):
+    bt.backup_data()   #备份数据库 
     test_suite = unittest.defaultTestLoader.discover(cases, pattern=pattern)
     result = BeautifulReport(test_suite)
-    result.report(filename='测试报告', description='企业国六测试报告', log_path=report)
+    result.report(filename='测试报告', description='快召货的接口测试报告', log_path=report)
     # 每次执行测试后 回收掉所有自动生成的测试文件
     disfiles = os.listdir(cases)
     for file in disfiles:
         if os.path.isfile(cases + file):
             os.remove(cases + file)
-  
-#     恢复数据库
-    bt=BackMysql()
-    bt.restores_data()
+
+    bt.restores_data() #还原数据库
+
 
 #     # 发送邮件
 #     send=Mail.SendMail()

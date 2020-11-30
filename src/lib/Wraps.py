@@ -1,11 +1,9 @@
-"""
-@Version: 1.0
-@Project: doraemon_recode
-@Author: Raymond
-@Data: 2018/1/30 下午1:20
-@File: Wraps.py
-@License: MIT
-"""
+'''
+Descripttion: 
+Author: zlj
+Date: 2020-11-27 16:23:27
+'''
+
 import json
 from functools import wraps
 from .LogHandler import LogHandler
@@ -27,10 +25,19 @@ def test_case_runner(func):
                     # logger.info("{} ===> {}".format(item.get('body'), value))
                     client = HttpHandler(item.get('body'))
                     response = client.make_request_template()
-                    result=response.json()
-                    result["code"]=response.status_code     #把状态码加到response
-                    logger.info("Result: {}".format(result))
-               
+                
+                    if (len(response.text)==0):  #delete方法response.text返回值为空
+                        result={"code":None}
+                        result["code"]=response.status_code     #把状态码加到response
+                        print("DetailResponse: {}".format(result))
+
+
+                    else:
+                        result=response.json()
+                        result["code"]=response.status_code     #把状态码加到response
+                        logger.info("Result: {}".format(result))
+                        print("DetailResponse: {}".format(result))
+                
                     return func(
                         *args,
                         response=result,

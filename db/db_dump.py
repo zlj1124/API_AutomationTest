@@ -12,8 +12,8 @@ class BackMysql(object):
         self.host = "192.168.3.81"	      
         self.user = "root"	           
         self.password = "root"	          
-        self.db = "dev_qiye6"	          
-        self.db_path = os.path.abspath("../doraemon/db/backup_res/")
+        self.db = "dev_df_kzhd"	          
+        self.db_path = os.path.abspath("../API_AutomationTest/db/backup_res/")
     
     
 

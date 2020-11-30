@@ -7097,92 +7097,79 @@ body.skin-3 {
 <script src="https://cdn.bootcss.com/chosen/1.8.2/chosen.jquery.js"></script>
 <script type="text/javascript">
     var resultData = {
-    "testPass": 3,
+    "testPass": 5,
     "testResult": [
         {
-            "className": "TestQiye6Login",
+            "className": "TestKzhdLogin",
             "methodName": "test_login",
-            "description": "测试企业6登录",
-            "spendTime": "0.674 s",
+            "description": "快召登录",
+            "spendTime": "0.457 s",
             "status": "成功",
             "log": [
-                "Response : {'code': 200, 'role': 'super_admin', 'username': '10086'}",
-                "AssertInfo:  self.assertEqual({\"code\": 200, \"role\": \"super_admin\", \"username\": \"10086\"}, {\"code\": 200, \"role\": \"super_admin\", \"username\": \"10086\"})",
+                "DetailResponse: {'data': {'username': '13911223344', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2NzkzNjQ1LCJqdGkiOiJkZjk4OWYxYjE2Y2U0ZTJjODcxNzkzOGM4OTYyMTViMSIsInVzZXJfaWQiOjJ9.3Ow7YaoALLbRGpnVlBBw-7YIAxxTRHLCrSeWLwMacAw', 'role': 'partnerstaff', 'name': '张无忌'}, 'type': 'success', 'code': 200, 'message': '请求成功'}",
+                "Response : {'code': 200, 'role': 'partnerstaff', 'username': '13911223344'}",
+                "AssertInfo:  self.assertEqual({\"code\": 200, \"role\": \"partnerstaff\", \"username\": \"13911223344\"}, {\"code\": 200, \"role\": \"partnerstaff\", \"username\": \"13911223344\"})",
                 ""
             ]
         },
         {
-            "className": "TestQiye7Profile",
-            "methodName": "test_1get_profile",
-            "description": "测试企业6权限查询",
-            "spendTime": "0.77 s",
-            "status": "失败",
-            "log": [
-                "Response : {'code': 200, 'count': 4}\nAssertInfo:  self.assertEqual({\"code\": 200, \"count\": 4}, {\"code\": 200, \"count\": 3})\n",
-                "Traceback (most recent call last):\n",
-                "  File \"/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/case.py\", line 59, in testPartExecutor\n    yield\n",
-                "  File \"/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/case.py\", line 605, in run\n    testMethod()\n",
-                "  File \"/Users/test/work/API_AutomationTest/src/lib/Wraps.py\", line 37, in wrap\n    kwassert=item.get('body').get('assert')\n",
-                "  File \"/Users/test/work/API_AutomationTest/src/lib/Wraps.py\", line 79, in wrap\n    return func(*args, response=result, exec_text=exec_info)\n",
-                "  File \"/Users/test/work/API_AutomationTest/src/testcases/TestQiye7Profile.py\", line 108, in test_1get_profile\n    exec(kwargs.get('exec_text'))\n",
-                "  File \"<string>\", line 1, in <module>\n",
-                "  File \"/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/case.py\", line 829, in assertEqual\n    assertion_func(first, second, msg=msg)\n",
-                "  File \"/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/case.py\", line 1121, in assertDictEqual\n    self.fail(self._formatMessage(msg, standardMsg))\n",
-                "  File \"/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/case.py\", line 670, in fail\n    raise self.failureException(msg)\n",
-                "AssertionError: {'code': 200, 'count': 4} != {'code': 200, 'count': 3}\n- {'code': 200, 'count': 4}\n?                        ^\n\n+ {'code': 200, 'count': 3}\n?                        ^\n\n"
-            ]
-        },
-        {
-            "className": "TestQiye7Profile",
-            "methodName": "test_2post_profile",
-            "description": "测试企业6权限增加",
-            "spendTime": "0.436 s",
-            "status": "失败",
-            "log": [
-                "Response : {'code': 400, 'phone': ['具有 电话 的 个人信息 已存在。']}\nAssertInfo:  self.assertEqual({\"code\": 400, \"phone\": [\"具有 电话 的 个人信息 已存在。\"]}, {\"code\": 201, \"phone\": \"13200000002\"})\n",
-                "Traceback (most recent call last):\n",
-                "  File \"/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/case.py\", line 59, in testPartExecutor\n    yield\n",
-                "  File \"/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/case.py\", line 605, in run\n    testMethod()\n",
-                "  File \"/Users/test/work/API_AutomationTest/src/lib/Wraps.py\", line 37, in wrap\n    kwassert=item.get('body').get('assert')\n",
-                "  File \"/Users/test/work/API_AutomationTest/src/lib/Wraps.py\", line 79, in wrap\n    return func(*args, response=result, exec_text=exec_info)\n",
-                "  File \"/Users/test/work/API_AutomationTest/src/testcases/TestQiye7Profile.py\", line 118, in test_2post_profile\n    exec(kwargs.get('exec_text'))\n",
-                "  File \"<string>\", line 1, in <module>\n",
-                "  File \"/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/case.py\", line 829, in assertEqual\n    assertion_func(first, second, msg=msg)\n",
-                "  File \"/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/case.py\", line 1121, in assertDictEqual\n    self.fail(self._formatMessage(msg, standardMsg))\n",
-                "  File \"/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/case.py\", line 670, in fail\n    raise self.failureException(msg)\n",
-                "AssertionError: {'code': 400, 'phone': ['具有 电话 的 个人信息 已存在。']} != {'code': 201, 'phone': '13200000002'}\n- {'code': 400, 'phone': ['具有 电话 的 个人信息 已存在。']}\n+ {'code': 201, 'phone': '13200000002'}\n"
-            ]
-        },
-        {
-            "className": "TestQiye7Profile",
-            "methodName": "test_3patch_profile",
-            "description": "测试企业6权限修改",
-            "spendTime": "0.487 s",
+            "className": "TestKzhdTruckmodel",
+            "methodName": "test_1get_truckmode",
+            "description": "测试查询车型",
+            "spendTime": "0.357 s",
             "status": "成功",
             "log": [
-                "Response : {'code': 200, 'name': '测试'}",
-                "AssertInfo:  self.assertEqual({\"code\": 200, \"name\": \"测试\"}, {\"code\": 200, \"name\": \"测试\"})",
+                "DetailResponse: {'data': {'count': 3, 'last': 1, 'next': None, 'next_link': None, 'previous': None, 'previous_link': None, 'page_size': 9999, 'results': [{'id': 3, 'truck_brand_name': '车品牌1', 'truck_series_name': '车系1', 'truck_box_type': 1, 'truck_model_type_name': '幻影', 'create_time': '2020-10-16T14:22:08.128079', 'update_time': '2020-10-19T10:19:56.800324', 'crate_length': 18.0, 'crate_width': 2.5, 'crate_height': 4.5, 'load_capacity': 11.0, 'other_info': '11', 'truck_model_type': 2, 'truck_brand': 1, 'truck_series': 1}, {'id': 2, 'truck_brand_name': '车品牌1', 'truck_series_name': '车系1', 'truck_box_type': 1, 'truck_model_type_name': '幻影', 'create_time': '2020-10-16T09:01:29.092839', 'update_time': '2020-10-16T09:01:29.092918', 'crate_length': 1.0, 'crate_width': 2.5, 'crate_height': 1.0, 'load_capacity': 120.0, 'other_info': '22', 'truck_model_type': 2, 'truck_brand': 1, 'truck_series': 1}, {'id': 1, 'truck_brand_name': '车品牌1', 'truck_series_name': '车系1', 'truck_box_type': 1, 'truck_model_type_name': '幻影', 'create_time': '2020-10-15T20:18:56.546302', 'update_time': '2020-11-30T11:31:31.766831', 'crate_length': 0.5, 'crate_width': 2.0, 'crate_height': 2.0, 'load_capacity': 2.0, 'other_info': '修改', 'truck_model_type': 2, 'truck_brand': 1, 'truck_series': 1}]}, 'type': 'success', 'code': 200, 'message': '请求成功'}",
+                "Response : {'code': 200, 'message': '请求成功'}",
+                "AssertInfo:  self.assertEqual({\"code\": 200, \"message\": \"请求成功\"}, {\"code\": 200, \"message\": \"请求成功\"})",
                 ""
             ]
         },
         {
-            "className": "TestQiye7Profile",
-            "methodName": "test_4delete_profile",
-            "description": "测试企业6权限删除",
-            "spendTime": "46.3 s",
+            "className": "TestKzhdTruckmodel",
+            "methodName": "test_2post_truckmodel",
+            "description": "测试增加车型",
+            "spendTime": "0.333 s",
             "status": "成功",
             "log": [
-                "Response : {'code': 200}",
-                "AssertInfo:  self.assertEqual({\"code\": 200}, {\"code\": 200})",
+                "DetailResponse: {'data': {'id': 10, 'truck_brand_name': '品牌2', 'truck_series_name': '车系2', 'truck_box_type': 2, 'truck_model_type_name': '普通', 'create_time': '2020-11-30T11:34:06.240212', 'update_time': '2020-11-30T11:34:06.240885', 'crate_length': 18.0, 'crate_width': 2.5, 'crate_height': 4.5, 'load_capacity': 120.0, 'other_info': '无', 'truck_model_type': 3, 'truck_brand': 2, 'truck_series': 2}, 'type': 'success', 'code': 201, 'message': '请求成功'}",
+                "Response : {'code': 201, 'other_info': '无', 'message': '请求成功'}",
+                "AssertInfo:  self.assertEqual({\"code\": 201, \"message\": \"请求成功\", \"other_info\": \"无\"}, {\"code\": 201, \"message\": \"请求成功\", \"other_info\": \"无\"})",
+                ""
+            ]
+        },
+        {
+            "className": "TestKzhdTruckmodel",
+            "methodName": "test_3patch_truckmodel",
+            "description": "测试修改车型",
+            "spendTime": "0.37 s",
+            "status": "成功",
+            "log": [
+                "DetailResponse: {'data': {'id': 1, 'truck_brand_name': '车品牌1', 'truck_series_name': '车系1', 'truck_box_type': 1, 'truck_model_type_name': '幻影', 'create_time': '2020-10-15T20:18:56.546302', 'update_time': '2020-11-30T11:34:06.628033', 'crate_length': 0.5, 'crate_width': 2.0, 'crate_height': 2.0, 'load_capacity': 2.0, 'other_info': '修改', 'truck_model_type': 2, 'truck_brand': 1, 'truck_series': 1}, 'type': 'success', 'code': 200, 'message': '请求成功'}",
+                "Response : {'code': 200, 'other_info': '修改', 'message': '请求成功'}",
+                "AssertInfo:  self.assertEqual({\"code\": 200, \"message\": \"请求成功\", \"other_info\": \"修改\"}, {\"code\": 200, \"message\": \"请求成功\", \"other_info\": \"修改\"})",
+                ""
+            ]
+        },
+        {
+            "className": "TestKzhdTruckmodel",
+            "methodName": "test_4delete_truckmodel",
+            "description": "测试删除车型",
+            "spendTime": "0.331 s",
+            "status": "成功",
+            "log": [
+                "DetailResponse: {'code': 204}",
+                "Response : {'code': 204}",
+                "AssertInfo:  self.assertEqual({\"code\": 204}, {\"code\": 204})",
                 ""
             ]
         }
     ],
-    "testName": "企业国六测试报告",
+    "testName": "快召货的接口测试报告",
     "testAll": 5,
-    "testFail": 2,
-    "beginTime": "2020-11-27 16:39:55",
-    "totalTime": "49s",
+    "testFail": 0,
+    "beginTime": "2020-11-30 11:34:05",
+    "totalTime": "1s",
     "testSkip": 0,
     "testError": 0
 };

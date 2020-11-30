@@ -1,0 +1,1 @@
+2020-11-27 14:59:19,876 CaseManager.py[line:40] ERROR 解析json 测试用例时出错, 出错文件: test_qiye7_profile.json, 错误信息: Expecting property name enclosed in double quotes: line 41 column 9 (char 1079)

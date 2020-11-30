@@ -18,6 +18,7 @@ from .LogHandler import LogHandler
 from .Recursion import GetDictParam
 from urllib import parse
 
+
 logger = LogHandler(__name__)
 SESSION = Session()
 
@@ -35,11 +36,11 @@ class HttpHandler(GetDictParam):
     @return: Response<status_code>
     """
     def __init__(self, request_bodys: dict):
-        
+      
         self.session = SESSION
         self.body = request_bodys
-        response=requests.post(url='http://192.168.3.18:30236/auth/login/',json= {"username": "10086", "password": "rootroot"})
-        self.token="JWT " + response.json()["token"]
+        response=requests.post(url='http://192.168.3.21:30366/auth/login/',json= {"username": "13911223344", "password": "13911223344"})
+        self.token="JWT " + response.json()['data']["token"]
         # logger.info("JWT " + response.json()["token"])
 
 
@@ -91,7 +92,7 @@ class HttpHandler(GetDictParam):
             logger.info(body)
             body = {key: value for key, value in body.items() if value is not None}
             logger.info(body)
-            return self.patch(**body)
+            return self.delete(**body)
 
 
 
@@ -102,12 +103,12 @@ class HttpHandler(GetDictParam):
         return self.session.post(**kwargs)
 
     def get(self, **kwargs: dict) -> dict:
-  
+    # return self.session.get(**kwargs).json()   
         return self.session.get(**kwargs)
 
     def patch(self, **kwargs: dict) -> dict:
-        return self.session.get(**kwargs) 
+        return self.session.patch(**kwargs) 
 
     def delete(self, **kwargs: dict) -> dict:
-        # return self.session.get(**kwargs).json()   
-        return self.session.get(**kwargs)  
+      
+        return self.session.delete(**kwargs)  
