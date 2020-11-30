@@ -1,6 +1,6 @@
 {
      
-    "test_1get_truckmode": {
+    "test1_get_truckmode": {
         "url": "http://192.168.3.21:30366/truck/truck_model/",
         "params": "truck_box_type=1&page=1&size=9999",
         "method": "get",
@@ -11,13 +11,13 @@
         "desc": "测试查询车型"
     },
 
-    "test_2post_truckmodel": {
+    "test2_post_truckmodel": {
         "url": "http://192.168.3.21:30366/truck/truck_model/",
-        "json": {"truck_model_type":3,"truck_brand":2,"truck_series":2,"crate_length":18,"crate_width":2.5,"crate_height":4.5,"load_capacity":120,"other_info":"无"},
+        "json": {"truck_model_type":3,"truck_brand":2,"truck_series":2,"crate_length":18,"crate_width":2.5,"crate_height":4.5,"load_capacity":120,"other_info":"新增的车型"},
         "method": "post",
         "assert": {
             "code":201,
-            "other_info":"无",
+            "other_info":"新增的车型",
             "message": "请求成功"
         },
         "desc": "测试增加车型"
@@ -26,19 +26,19 @@
 
     
 
-    "test_3patch_truckmodel": {
+    "test3_patch_truckmodel": {
         "url": "http://192.168.3.21:30366/truck/truck_model/1/",
-        "json": {"id":1,"truck_model_type":2,"truck_brand":1,"truck_series":1,"crate_length":0.5,"crate_width":2,"crate_height":2,"load_capacity":2,"other_info":"修改"},
+        "json": {"id":1,"truck_model_type":2,"truck_brand":1,"truck_series":1,"crate_length":0.5,"crate_width":2,"crate_height":2,"load_capacity":2,"other_info":"修改过"},
         "method": "PATCH",
         "assert": {
             "code":200,
-            "other_info":"修改",
+            "other_info":"修改过",
             "message": "请求成功"
         },
         "desc": "测试修改车型"
     },
-    "test_4delete_truckmodel": {
-        "url": "http://192.168.3.21:30366/truck/truck_model/7/",
+    "test4_delete_truckmodel": {
+        "url": "http://192.168.3.21:30366/truck/truck_model/1/",
         
         "method": "DELETE",
         "assert": {
