@@ -55,8 +55,7 @@
         
         "method": "DELETE",
         "assert": {
-            "code":204
-            
+            "code":204   
         },
         "desc": "测试删除自有司机"
     }

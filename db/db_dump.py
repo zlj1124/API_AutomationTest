@@ -4,15 +4,20 @@ Author: zlj
 Date: 2020-11-25 17:20:42
 '''
 import os
-
+from src.config import config
 
 
 class BackMysql(object):	
     def __init__(self):	    
-        self.host = "192.168.3.81"	      
-        self.user = "root"	           
-        self.password = "root"	          
-        self.db = "dev_df_kzhd"	          
+        # self.host = "192.168.3.81"	      
+        # self.user = "root"	           
+        # self.password = "root"	          
+        # self.db = "dev_df_kzhd"	
+
+        self.host=config.HOST
+        self.user=config.USER
+        self.password=config.PASS
+        self.db=config.DB_NAME          
         self.db_path = os.path.abspath("../API_AutomationTest/db/backup_res/")
     
     

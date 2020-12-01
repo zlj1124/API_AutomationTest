@@ -56,10 +56,10 @@ class HttpHandler(GetDictParam):
             make request body headers cookies and methods
         :return:
         """
-        # logger.info(self.body)
-        # logger.info("接受到 Func: {}, 参数为: {}".format(
-        #     self.body.get('methods_name'), json.dumps(self.body, indent=4, ensure_ascii=False))
-        # )
+       
+        logger.info("接受到 Func: {}, 参数为: {}".format(
+            self.body.get('methods_name'), json.dumps(self.body, indent=4, ensure_ascii=False))
+        )
     
 
         method = self.body.get('method')
@@ -71,7 +71,7 @@ class HttpHandler(GetDictParam):
             if body.get('params'):
                 if "&" in body.get('params') and "=" in body.get('params'):
                     body["params"] = dict(parse.parse_qsl(body["params"]))
-            logger.info("GET *TMP: {}".format(self.list_for_key_to_dict(*tmp, my_dict=self.body)))
+            logger.info("GET 请求: {}".format(self.list_for_key_to_dict(*tmp, my_dict=self.body)))
             return self.get(**body)
 
         if method in ['post', 'POST']:
@@ -79,26 +79,26 @@ class HttpHandler(GetDictParam):
             tmp = ("url", "data", "json", "headers", "cookies")
             body = self.list_for_key_to_dict(*tmp, my_dict=self.body)
             body['headers']={"Authorization":self.token}
-            logger.info(body)
             body = {key: value for key, value in body.items() if value is not None}
+            logger.info("POST 请求：{}".format(body))
+
             return self.post(**body)
 
         if method in ['patch', 'PATCH']:
             tmp = ("url", "data", "json", "headers", "cookies")
             body = self.list_for_key_to_dict(*tmp, my_dict=self.body)
             body['headers']={"Authorization":self.token}
-            logger.info(body)
             body = {key: value for key, value in body.items() if value is not None}
-            logger.info(body)
+            logger.info("PATCH 请求：{}".format(body))
             return self.patch(**body)
 
         if method in ['delete','DELETE']:
             tmp = ("url", "data", "json", "headers", "cookies")
             body = self.list_for_key_to_dict(*tmp, my_dict=self.body)
             body['headers']={"Authorization":self.token}
-            logger.info(body)
             body = {key: value for key, value in body.items() if value is not None}
-            logger.info(body)
+            logger.info("DELETE 请求：{}".format(body))
+           
             return self.delete(**body)
 
 

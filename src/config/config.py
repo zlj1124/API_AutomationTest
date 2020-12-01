@@ -1,3 +1,8 @@
+'''
+Descripttion: 
+Author: zlj
+Date: 2020-11-27 16:23:27
+'''
 
 import json
 import os
@@ -31,6 +36,14 @@ SENDER = '2205663173@qq.com'
 RECEIVER = 'zuolj@burnish.cn'
 NUERNAME = '2205663173@qq.com'
 PASSWORD = 'gicaukulxsvhdiga'
+
+
+#DB
+HOST="192.168.3.81"
+USER="root"
+PASS="root"
+DB_NAME="dev_df_kzhd"
+
 
 # Messages
 

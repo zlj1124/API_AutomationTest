@@ -2118,7 +2118,7 @@ CREATE TABLE `kzhd_templateteam` (
   KEY `kzhd_templateteam_leader_id_b28d9552_fk_kzhd_driv` (`leader_id`),
   CONSTRAINT `kzhd_templateteam_leader_id_b28d9552_fk_kzhd_driv` FOREIGN KEY (`leader_id`) REFERENCES `kzhd_driver` (`generalprofile_ptr_id`),
   CONSTRAINT `kzhd_templateteam_partner_id_7ce807c0_fk_kzhd_partner_id` FOREIGN KEY (`partner_id`) REFERENCES `kzhd_partner` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2127,7 +2127,7 @@ CREATE TABLE `kzhd_templateteam` (
 
 LOCK TABLES `kzhd_templateteam` WRITE;
 /*!40000 ALTER TABLE `kzhd_templateteam` DISABLE KEYS */;
-INSERT INTO `kzhd_templateteam` VALUES (1,'2020-10-16 11:02:53.513730','2020-10-19 09:31:55.102588',1,'q1111',1,NULL),(2,'2020-10-16 11:14:58.512227','2020-10-16 14:02:27.268728',1,'444',1,NULL),(3,'2020-10-16 14:02:49.547370','2020-10-16 14:07:00.729899',1,'3333',1,NULL),(4,'2020-10-16 14:03:26.588028','2020-10-19 09:31:59.070955',1,'在增加一个',1,NULL),(5,'2020-10-16 14:18:08.993434','2020-10-19 09:42:38.739339',1,'333',1,NULL),(6,'2020-10-16 18:05:26.139792','2020-10-19 09:31:40.432730',1,'22',1,NULL),(7,'2020-10-16 18:14:09.714647','2020-10-16 18:34:03.585260',1,'111',1,NULL),(8,'2020-10-19 09:43:46.169187','2020-10-19 09:44:23.508952',1,'333',1,NULL),(9,'2020-10-19 09:45:34.021097','2020-10-19 09:45:50.166348',1,'222',1,NULL),(10,'2020-10-19 09:46:15.727942','2020-10-19 09:46:42.393970',1,'999',1,NULL),(11,'2020-10-19 09:46:53.233470','2020-10-19 09:48:13.031833',1,'9999',1,NULL),(12,'2020-10-19 11:08:11.623263','2020-10-20 10:19:12.282663',0,'第一个车队',1,13),(13,'2020-10-19 11:08:52.418864','2020-11-30 15:23:42.821904',0,'第二个车队',1,8);
+INSERT INTO `kzhd_templateteam` VALUES (1,'2020-10-16 11:02:53.513730','2020-10-19 09:31:55.102588',1,'q1111',1,NULL),(2,'2020-10-16 11:14:58.512227','2020-10-16 14:02:27.268728',1,'444',1,NULL),(3,'2020-10-16 14:02:49.547370','2020-10-16 14:07:00.729899',1,'3333',1,NULL),(4,'2020-10-16 14:03:26.588028','2020-10-19 09:31:59.070955',1,'在增加一个',1,NULL),(5,'2020-10-16 14:18:08.993434','2020-10-19 09:42:38.739339',1,'333',1,NULL),(6,'2020-10-16 18:05:26.139792','2020-10-19 09:31:40.432730',1,'22',1,NULL),(7,'2020-10-16 18:14:09.714647','2020-10-16 18:34:03.585260',1,'111',1,NULL),(8,'2020-10-19 09:43:46.169187','2020-10-19 09:44:23.508952',1,'333',1,NULL),(9,'2020-10-19 09:45:34.021097','2020-10-19 09:45:50.166348',1,'222',1,NULL),(10,'2020-10-19 09:46:15.727942','2020-10-19 09:46:42.393970',1,'999',1,NULL),(11,'2020-10-19 09:46:53.233470','2020-10-19 09:48:13.031833',1,'9999',1,NULL),(12,'2020-10-19 11:08:11.623263','2020-10-20 10:19:12.282663',0,'第一个车队',1,13),(13,'2020-10-19 11:08:52.418864','2020-12-01 10:00:58.199197',0,'第二个车队',1,8),(14,'2020-12-01 13:29:49.433663','2020-12-01 13:31:53.472434',0,'火箭队',1,NULL);
 /*!40000 ALTER TABLE `kzhd_templateteam` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2147,7 +2147,7 @@ CREATE TABLE `kzhd_templateteam_drivers` (
   KEY `kzhd_templateteam_dr_driver_id_453d39b5_fk_kzhd_driv` (`driver_id`),
   CONSTRAINT `kzhd_templateteam_dr_driver_id_453d39b5_fk_kzhd_driv` FOREIGN KEY (`driver_id`) REFERENCES `kzhd_driver` (`generalprofile_ptr_id`),
   CONSTRAINT `kzhd_templateteam_dr_templateteam_id_9547a64e_fk_kzhd_temp` FOREIGN KEY (`templateteam_id`) REFERENCES `kzhd_templateteam` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2156,7 +2156,7 @@ CREATE TABLE `kzhd_templateteam_drivers` (
 
 LOCK TABLES `kzhd_templateteam_drivers` WRITE;
 /*!40000 ALTER TABLE `kzhd_templateteam_drivers` DISABLE KEYS */;
-INSERT INTO `kzhd_templateteam_drivers` VALUES (13,3,4),(39,12,10),(40,12,13),(41,13,8);
+INSERT INTO `kzhd_templateteam_drivers` VALUES (13,3,4),(39,12,10),(40,12,13),(41,13,8),(44,13,9);
 /*!40000 ALTER TABLE `kzhd_templateteam_drivers` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2526,4 +2526,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-30 16:50:55
+-- Dump completed on 2020-12-01 14:10:15

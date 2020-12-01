@@ -41,8 +41,8 @@ def run(cases, pattern, report):
 
 
 #     # 发送邮件
-    send=Mail.SendMail()
-    send.sendMail()
+#     send=Mail.SendMail()
+#     send.sendMail()
 
 
 
