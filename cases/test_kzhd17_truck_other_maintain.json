@@ -1,0 +1,64 @@
+{
+     
+    "test1_get_truck_other_maintain": {
+        "url": "http://192.168.3.75:30366/truck/other_maintain/",
+        "params": "size=15&page=1",
+        "method": "get",
+        "assert": {
+            "code":200,
+            "message": "请求成功"
+        },
+        "desc": "测试查询其他维护列表"
+    },
+
+    "test2_post_truck_other_maintain": {
+        "url": "http://192.168.3.75:30366/truck/other_maintain/",
+        "json": {
+            "truck": 185,
+            "price": 100,
+            "maintain_time": "2020-12-14",
+            "pay_project": "补漆"
+       
+          },
+        "method": "post",
+        "assert": {
+            "code":201,
+            "price": "100.00",
+            "maintain_time": "2020-12-14",
+            "pay_project": "补漆",
+            "message": "请求成功"
+        },
+        "desc": "测试增加其他维护记录"
+    },
+
+    "test3_patch_truck_other_maintain": {
+        "url": "http://192.168.3.75:30366/truck/other_maintain/19/",
+        "json":{
+            "truck": 185,
+            "price": 100,
+            "maintain_time": "2020-12-14",
+            "pay_project": "修改其他维护"
+       
+          },
+        "method": "PATCH",
+        "assert": {
+            "code":200,
+            "price": "100.00",
+            "maintain_time": "2020-12-14",
+            "pay_project": "修改其他维护",
+            "message": "请求成功"
+        },
+        "desc": "测试修改其他维护记录"
+    },
+    "test4_delete_truck_other_maintain": {
+        "url": "http://192.168.3.75:30366/truck/other_maintain/19/",
+        
+        "method": "DELETE",
+        "assert": {
+            "code":204   
+        },
+        "desc": "测试删除其他维护记录"
+    }
+
+
+} 

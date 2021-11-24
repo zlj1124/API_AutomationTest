@@ -7097,182 +7097,55 @@ body.skin-3 {
 <script src="https://cdn.bootcss.com/chosen/1.8.2/chosen.jquery.js"></script>
 <script type="text/javascript">
     var resultData = {
-    "testPass": 14,
+    "testPass": 3,
     "testResult": [
         {
-            "className": "TestKzhdEmployDriver",
-            "methodName": "test1_get_employdriver",
-            "description": "测试查询自有司机",
-            "spendTime": "0.593 s",
-            "status": "成功",
-            "log": [
-                "DetailResponse: {'data': {'count': 7, 'last': 1, 'next': None, 'next_link': None, 'previous': None, 'previous_link': None, 'page_size': 15, 'results': [{'hire_date': '2020-10-13', 'id': 16, 'avatar': None, 'phone': '13500000002', 'name': '张三', 'citizen_id': '500111111111111112', 'score_sum': 0.0, 'user': 21, 'identity': 'employdriver', 'identity_display': '自有司机', 'truck': None, 'last_login_time': None, 'recent_use_time': None, 'partner_name': '找找物流公司'}, {'hire_date': '2020-10-19', 'id': 13, 'avatar': None, 'phone': '13800000002', 'name': '司机2', 'citizen_id': '500113202015164512', 'score_sum': 0.0, 'user': 14, 'identity': 'employdriver', 'identity_display': '自有司机', 'truck': {'id': 8, 'plate_number': '渝A123456', 'vin': None, 'truck_model_name': '品牌2/车系2/面包车五菱宏光/箱长0.5米/载重0.5吨'}, 'last_login_time': None, 'recent_use_time': None, 'partner_name': '找找物流公司'}, {'hire_date': '2020-10-07', 'id': 10, 'avatar': None, 'phone': '13636336391', 'name': '自有司机', 'citizen_id': '136363363911363633', 'score_sum': 0.0, 'user': 11, 'identity': 'employdriver', 'identity_display': '自有司机', 'truck': {'id': 5, 'plate_number': '1111', 'vin': None, 'truck_model_name': '车品牌1/车系1/箱式幻影/箱长18.0米/载重2.5吨'}, 'last_login_time': None, 'recent_use_time': None, 'partner_name': '找找物流公司'}, {'hire_date': '2020-10-08', 'id': 9, 'avatar': None, 'phone': '13636363631', 'name': '绑定车辆', 'citizen_id': '111111111111111111', 'score_sum': 0.0, 'user': 10, 'identity': 'employdriver', 'identity_display': '自有司机', 'truck': {'id': 3, 'plate_number': '22', 'vin': None, 'truck_model_name': '车品牌1/车系1/箱式幻影/箱长18.0米/载重2.5吨'}, 'last_login_time': None, 'recent_use_time': None, 'partner_name': '找找物流公司'}, {'hire_date': '2020-10-07', 'id': 8, 'avatar': None, 'phone': '13636363636', 'name': '1111', 'citizen_id': '136363636361363636', 'score_sum': 0.0, 'user': 9, 'identity': 'employdriver', 'identity_display': '自有司机', 'truck': {'id': 6, 'plate_number': '绑定出测量2', 'vin': None, 'truck_model_name': '车品牌1/车系1/箱式幻影/箱长1.0米/载重2.5吨'}, 'last_login_time': None, 'recent_use_time': None, 'partner_name': '找找物流公司'}, {'hire_date': '2020-10-16', 'id': 7, 'avatar': None, 'phone': '13799885566', 'name': 'aaa', 'citizen_id': '137998855661379988', 'score_sum': 0.0, 'user': 8, 'identity': 'employdriver', 'identity_display': '自有司机', 'truck': {'id': 7, 'plate_number': '1111', 'vin': None, 'truck_model_name': '品牌2/车系2/仓栏普通/箱长0.5米/载重0.5吨'}, 'last_login_time': None, 'recent_use_time': None, 'partner_name': '找找物流公司'}, {'hire_date': '2020-10-16', 'id': 3, 'avatar': None, 'phone': '16798462566', 'name': 'string', 'citizen_id': '356846198703193698', 'score_sum': 0.0, 'user': 4, 'identity': 'employdriver', 'identity_display': '自有司机', 'truck': None, 'last_login_time': None, 'recent_use_time': None, 'partner_name': '找找物流公司'}]}, 'type': 'success', 'code': 200, 'message': '请求成功'}",
-                "Response : {'code': 200, 'message': '请求成功'}",
-                "AssertInfo:  self.assertEqual({\"code\": 200, \"message\": \"请求成功\"}, {\"code\": 200, \"message\": \"请求成功\"})",
-                ""
-            ]
-        },
-        {
-            "className": "TestKzhdEmployDriver",
-            "methodName": "test2_get_ubind_employdriver",
-            "description": "测试筛选未绑定的自有司机",
-            "spendTime": "0.422 s",
-            "status": "成功",
-            "log": [
-                "DetailResponse: {'data': {'count': 2, 'last': 1, 'next': None, 'next_link': None, 'previous': None, 'previous_link': None, 'page_size': 10, 'results': [{'hire_date': '2020-10-13', 'id': 16, 'avatar': None, 'phone': '13500000002', 'name': '张三', 'citizen_id': '500111111111111112', 'score_sum': 0.0, 'user': 21, 'identity': 'employdriver', 'identity_display': '自有司机', 'truck': None, 'last_login_time': None, 'recent_use_time': None, 'partner_name': '找找物流公司'}, {'hire_date': '2020-10-16', 'id': 3, 'avatar': None, 'phone': '16798462566', 'name': 'string', 'citizen_id': '356846198703193698', 'score_sum': 0.0, 'user': 4, 'identity': 'employdriver', 'identity_display': '自有司机', 'truck': None, 'last_login_time': None, 'recent_use_time': None, 'partner_name': '找找物流公司'}]}, 'type': 'success', 'code': 200, 'message': '请求成功'}",
-                "Response : {'code': 200, 'message': '请求成功'}",
-                "AssertInfo:  self.assertEqual({\"code\": 200, \"message\": \"请求成功\"}, {\"code\": 200, \"message\": \"请求成功\"})",
-                ""
-            ]
-        },
-        {
-            "className": "TestKzhdEmployDriver",
-            "methodName": "test3_post_employdriver",
-            "description": "测试增加自有司机",
-            "spendTime": "0.736 s",
-            "status": "成功",
-            "log": [
-                "DetailResponse: {'data': {'hire_date': '2020-11-04', 'id': 24, 'score_cargo': 0.0, 'score_time': 0.0, 'score_service': 0.0, 'score_sum': 0.0, 'user': 31, 'identity': 'employdriver', 'identity_display': '自有司机', 'last_login_time': None, 'recent_use_time': None, 'avatar': None, 'name': '新增自有司机', 'phone': '13245362719', 'citizen_id': '500113199811157621', 'truck': None}, 'type': 'success', 'code': 201, 'message': '请求成功'}",
-                "Response : {'code': 201, 'name': '新增自有司机', 'phone': '13245362719', 'citizen_id': '500113199811157621', 'message': '请求成功'}",
-                "AssertInfo:  self.assertEqual({\"citizen_id\": \"500113199811157621\", \"code\": 201, \"message\": \"请求成功\", \"name\": \"新增自有司机\", \"phone\": \"13245362719\"}, {\"citizen_id\": \"500113199811157621\", \"code\": 201, \"message\": \"请求成功\", \"name\": \"新增自有司机\", \"phone\": \"13245362719\"})",
-                ""
-            ]
-        },
-        {
-            "className": "TestKzhdEmployDriver",
-            "methodName": "test4_patch_employdriver",
-            "description": "修改自有司机",
-            "spendTime": "0.376 s",
-            "status": "成功",
-            "log": [
-                "DetailResponse: {'data': {'hire_date': '2020-10-13', 'id': 16, 'score_cargo': 0.0, 'score_time': 0.0, 'score_service': 0.0, 'score_sum': 0.0, 'user': 21, 'identity': 'employdriver', 'identity_display': '自有司机', 'last_login_time': None, 'recent_use_time': None, 'avatar': None, 'name': '修改', 'phone': '13500000002', 'citizen_id': '500111111111111112', 'truck': None}, 'type': 'success', 'code': 200, 'message': '请求成功'}",
-                "Response : {'code': 200, 'name': '修改', 'message': '请求成功'}",
-                "AssertInfo:  self.assertEqual({\"code\": 200, \"message\": \"请求成功\", \"name\": \"修改\"}, {\"code\": 200, \"message\": \"请求成功\", \"name\": \"修改\"})",
-                ""
-            ]
-        },
-        {
-            "className": "TestKzhdEmployDriver",
-            "methodName": "test5_delete_employdriver",
-            "description": "测试删除自有司机",
-            "spendTime": "0.483 s",
-            "status": "成功",
-            "log": [
-                "DetailResponse: {'code': 204}",
-                "Response : {'code': 204}",
-                "AssertInfo:  self.assertEqual({\"code\": 204}, {\"code\": 204})",
-                ""
-            ]
-        },
-        {
-            "className": "TestKzhdLogin",
+            "className": "TestKzhd01Login",
             "methodName": "test_login",
-            "description": "快召登录",
-            "spendTime": "0.735 s",
+            "description": "快召物流商登录",
+            "spendTime": "1.26 s",
             "status": "成功",
             "log": [
-                "DetailResponse: {'data': {'username': '13911223344', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2ODg5NDE4LCJqdGkiOiI1NDAwN2RjYTc4ODk0OGU0YTg2OGE5ZmJiNjljMjJkYyIsInVzZXJfaWQiOjJ9.f373qpbrHbah8lXVXqEpTYqzseORZuzoRe4CBT3L0i8', 'role': 'partnerstaff', 'name': '张无忌'}, 'type': 'success', 'code': 200, 'message': '请求成功'}",
-                "Response : {'code': 200, 'role': 'partnerstaff', 'username': '13911223344'}",
-                "AssertInfo:  self.assertEqual({\"code\": 200, \"role\": \"partnerstaff\", \"username\": \"13911223344\"}, {\"code\": 200, \"role\": \"partnerstaff\", \"username\": \"13911223344\"})",
+                "Response : {'code': 200, 'role': 'partnerstaff', 'username': '13874562154'}",
+                "AssertInfo:  self.assertEqual({\"code\": 200, \"role\": \"partnerstaff\", \"username\": \"13874562154\"}, {\"code\": 200, \"role\": \"partnerstaff\", \"username\": \"13874562154\"})",
                 ""
             ]
         },
         {
-            "className": "TestKzhdStaff",
-            "methodName": "test1_get_staff",
-            "description": "测试查询管理员角色",
-            "spendTime": "0.908 s",
+            "className": "TestKzhd16TruckFuelCharging",
+            "methodName": "test1_get_truck_fuel_charging",
+            "description": "测试查询加油记录列表",
+            "spendTime": "1.01 s",
             "status": "成功",
             "log": [
-                "DetailResponse: {'data': {'count': 4, 'last': 1, 'next': None, 'next_link': None, 'previous': None, 'previous_link': None, 'page_size': 10, 'results': [{'id': 23, 'phone': '13254621321', 'name': '测试', 'user': 30, 'user_obj': {'id': 30, 'username': '466a6bw8TA'}, 'identity': 'partnerstaff', 'identity_display': '物流公司员工', 'role': 2, 'role_display': '管理员', 'partner': 1, 'department': '销售', 'create_time': '2020-11-30T15:39:45.436891', 'last_login_time': None, 'recent_use_time': None}, {'id': 19, 'phone': '13272654816', 'name': '赵6', 'user': 26, 'user_obj': {'id': 26, 'username': 'DwMRwtEJJo'}, 'identity': 'partnerstaff', 'identity_display': '物流公司员工', 'role': 2, 'role_display': '管理员', 'partner': 1, 'department': '运营', 'create_time': '2020-10-20T09:08:08.118619', 'last_login_time': None, 'recent_use_time': None}, {'id': 14, 'phone': '15972990000', 'name': '管理员', 'user': 19, 'user_obj': {'id': 19, 'username': 'Dd9bvrGBz7'}, 'identity': 'partnerstaff', 'identity_display': '物流公司员工', 'role': 2, 'role_display': '管理员', 'partner': 1, 'department': '运营', 'create_time': '2020-10-19T10:30:10.858843', 'last_login_time': None, 'recent_use_time': None}, {'id': 12, 'phone': '13636363631', 'name': '111', 'user': 13, 'user_obj': {'id': 13, 'username': 'FRA3TisJ6a'}, 'identity': 'partnerstaff', 'identity_display': '物流公司员工', 'role': 2, 'role_display': '管理员', 'partner': 1, 'department': '111', 'create_time': '2020-10-16T18:42:20.453752', 'last_login_time': None, 'recent_use_time': None}]}, 'type': 'success', 'code': 200, 'message': '请求成功'}",
-                "Response : {'code': 200, 'role_display': '管理员', 'message': '请求成功'}",
-                "AssertInfo:  self.assertEqual({\"code\": 200, \"message\": \"请求成功\", \"role_display\": \"管理员\"}, {\"code\": 200, \"message\": \"请求成功\", \"role_display\": \"管理员\"})",
-                ""
-            ]
-        },
-        {
-            "className": "TestKzhdStaff",
-            "methodName": "test2_post_staff",
-            "description": "测试增加管理员",
-            "spendTime": "1.04 s",
-            "status": "成功",
-            "log": [
-                "DetailResponse: {'data': {'id': 25, 'user': 32, 'identity': 'partnerstaff', 'identity_display': '物流公司员工', 'role_display': '管理员', 'create_time': '2020-12-01T14:10:20.575966', 'last_login_time': None, 'recent_use_time': None, 'partner': 1, 'department': '销售', 'phone': '13946512541', 'name': '测试', 'role': 2}, 'type': 'success', 'code': 201, 'message': '请求成功'}",
-                "Response : {'code': 201, 'name': '测试', 'message': '请求成功'}",
-                "AssertInfo:  self.assertEqual({\"code\": 201, \"message\": \"请求成功\", \"name\": \"测试\"}, {\"code\": 201, \"message\": \"请求成功\", \"name\": \"测试\"})",
-                ""
-            ]
-        },
-        {
-            "className": "TestKzhdStaff",
-            "methodName": "test3_patch_staff",
-            "description": "测试修改管理员",
-            "spendTime": "0.384 s",
-            "status": "成功",
-            "log": [
-                "DetailResponse: {'data': {'id': 1, 'user': 2, 'identity': 'partnerstaff', 'identity_display': '物流公司员工', 'role_display': '超级管理员', 'create_time': '2020-10-15T17:34:12.907625', 'last_login_time': None, 'recent_use_time': None, 'partner': 1, 'department': '销售', 'phone': '13911223344', 'name': '修改张无忌', 'role': 1}, 'type': 'success', 'code': 200, 'message': '请求成功'}",
-                "Response : {'code': 200, 'name': '修改张无忌', 'message': '请求成功'}",
-                "AssertInfo:  self.assertEqual({\"code\": 200, \"message\": \"请求成功\", \"name\": \"修改张无忌\"}, {\"code\": 200, \"message\": \"请求成功\", \"name\": \"修改张无忌\"})",
-                ""
-            ]
-        },
-        {
-            "className": "TestKzhdStaff",
-            "methodName": "test4_delete_staff",
-            "description": "测试删除管理员",
-            "spendTime": "0.489 s",
-            "status": "成功",
-            "log": [
-                "DetailResponse: {'code': 204}",
-                "Response : {'code': 204}",
-                "AssertInfo:  self.assertEqual({\"code\": 204}, {\"code\": 204})",
-                ""
-            ]
-        },
-        {
-            "className": "TestKzhdTruckmodel",
-            "methodName": "test1_get_truckmode",
-            "description": "测试查询车型",
-            "spendTime": "0.555 s",
-            "status": "成功",
-            "log": [
-                "DetailResponse: {'data': {'count': 3, 'last': 1, 'next': None, 'next_link': None, 'previous': None, 'previous_link': None, 'page_size': 9999, 'results': [{'id': 3, 'truck_brand_name': '车品牌1', 'truck_series_name': '车系1', 'truck_box_type': 1, 'truck_model_type_name': '幻影', 'create_time': '2020-10-16T14:22:08.128079', 'update_time': '2020-10-19T10:19:56.800324', 'crate_length': 18.0, 'crate_width': 2.5, 'crate_height': 4.5, 'load_capacity': 11.0, 'other_info': '11', 'truck_model_type': 2, 'truck_brand': 1, 'truck_series': 1}, {'id': 2, 'truck_brand_name': '车品牌1', 'truck_series_name': '车系1', 'truck_box_type': 1, 'truck_model_type_name': '幻影', 'create_time': '2020-10-16T09:01:29.092839', 'update_time': '2020-10-16T09:01:29.092918', 'crate_length': 1.0, 'crate_width': 2.5, 'crate_height': 1.0, 'load_capacity': 120.0, 'other_info': '22', 'truck_model_type': 2, 'truck_brand': 1, 'truck_series': 1}, {'id': 1, 'truck_brand_name': '车品牌1', 'truck_series_name': '车系1', 'truck_box_type': 1, 'truck_model_type_name': '幻影', 'create_time': '2020-10-15T20:18:56.546302', 'update_time': '2020-11-30T11:31:31.766831', 'crate_length': 0.5, 'crate_width': 2.0, 'crate_height': 2.0, 'load_capacity': 2.0, 'other_info': '修改', 'truck_model_type': 2, 'truck_brand': 1, 'truck_series': 1}]}, 'type': 'success', 'code': 200, 'message': '请求成功'}",
                 "Response : {'code': 200, 'message': '请求成功'}",
                 "AssertInfo:  self.assertEqual({\"code\": 200, \"message\": \"请求成功\"}, {\"code\": 200, \"message\": \"请求成功\"})",
                 ""
             ]
         },
         {
-            "className": "TestKzhdTruckmodel",
-            "methodName": "test2_post_truckmodel",
-            "description": "测试增加车型",
-            "spendTime": "0.489 s",
-            "status": "成功",
+            "className": "TestKzhd16TruckFuelCharging",
+            "methodName": "test2_post_truck_fuel_charging",
+            "description": "测试增加加油记录",
+            "spendTime": "1.06 s",
+            "status": "失败",
             "log": [
-                "DetailResponse: {'data': {'id': 10, 'truck_brand_name': '品牌2', 'truck_series_name': '车系2', 'truck_box_type': 2, 'truck_model_type_name': '普通', 'create_time': '2020-12-01T14:10:22.499059', 'update_time': '2020-12-01T14:10:22.499398', 'crate_length': 18.0, 'crate_width': 2.5, 'crate_height': 4.5, 'load_capacity': 120.0, 'other_info': '新增的车型', 'truck_model_type': 3, 'truck_brand': 2, 'truck_series': 2}, 'type': 'success', 'code': 201, 'message': '请求成功'}",
-                "Response : {'code': 201, 'other_info': '新增的车型', 'message': '请求成功'}",
-                "AssertInfo:  self.assertEqual({\"code\": 201, \"message\": \"请求成功\", \"other_info\": \"新增的车型\"}, {\"code\": 201, \"message\": \"请求成功\", \"other_info\": \"新增的车型\"})",
-                ""
+                "Response : {'code': 400, 'kilometer': None, 'price': None, 'maintain_time': None, 'message': '新增里程数,不能比最后一次里程小'}\nAssertInfo:  self.assertEqual({\"code\": 400, \"kilometer\": null, \"maintain_time\": null, \"message\": \"新增里程数,不能比最后一次里程小\", \"price\": null}, {\"code\": 201, \"kilometer\": 200.0, \"maintain_time\": \"2020-12-14\", \"message\": \"请求成功\", \"price\": \"100.00\"})\n",
+                "Traceback (most recent call last):\n",
+                "  File \"/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/case.py\", line 59, in testPartExecutor\n    yield\n",
+                "  File \"/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/case.py\", line 605, in run\n    testMethod()\n",
+                "  File \"/Users/test/work/API_AutomationTest/src/lib/Wraps.py\", line 46, in wrap\n    kwassert=item.get('body').get('assert')\n",
+                "  File \"/Users/test/work/API_AutomationTest/src/lib/Wraps.py\", line 88, in wrap\n    return func(*args, response=result, exec_text=exec_info)\n",
+                "  File \"/Users/test/work/API_AutomationTest/src/testcases/TestKzhd16TruckFuelCharging.py\", line 38, in test2_post_truck_fuel_charging\n    exec(kwargs.get('exec_text'))\n",
+                "  File \"<string>\", line 1, in <module>\n",
+                "NameError: name 'null' is not defined\n"
             ]
         },
         {
-            "className": "TestKzhdTruckmodel",
-            "methodName": "test3_patch_truckmodel",
-            "description": "测试修改车型",
-            "spendTime": "0.516 s",
-            "status": "成功",
-            "log": [
-                "DetailResponse: {'data': {'id': 1, 'truck_brand_name': '车品牌1', 'truck_series_name': '车系1', 'truck_box_type': 1, 'truck_model_type_name': '幻影', 'create_time': '2020-10-15T20:18:56.546302', 'update_time': '2020-12-01T14:10:23.021493', 'crate_length': 0.5, 'crate_width': 2.0, 'crate_height': 2.0, 'load_capacity': 2.0, 'other_info': '修改过', 'truck_model_type': 2, 'truck_brand': 1, 'truck_series': 1}, 'type': 'success', 'code': 200, 'message': '请求成功'}",
-                "Response : {'code': 200, 'other_info': '修改过', 'message': '请求成功'}",
-                "AssertInfo:  self.assertEqual({\"code\": 200, \"message\": \"请求成功\", \"other_info\": \"修改过\"}, {\"code\": 200, \"message\": \"请求成功\", \"other_info\": \"修改过\"})",
-                ""
-            ]
-        },
-        {
-            "className": "TestKzhdTruckmodel",
-            "methodName": "test4_delete_truckmodel",
-            "description": "测试删除车型",
-            "spendTime": "0.379 s",
+            "className": "TestKzhd16TruckFuelCharging",
+            "methodName": "test3_delete_truck_fuel_charging",
+            "description": "测试删除加油记录",
+            "spendTime": "1.08 s",
             "status": "成功",
             "log": [
                 "DetailResponse: {'code': 204}",
@@ -7283,10 +7156,10 @@ body.skin-3 {
         }
     ],
     "testName": "快召货的接口测试报告",
-    "testAll": 14,
-    "testFail": 0,
-    "beginTime": "2020-12-01 14:10:15",
-    "totalTime": "8s",
+    "testAll": 4,
+    "testFail": 1,
+    "beginTime": "2021-11-24 10:57:15",
+    "totalTime": "5s",
     "testSkip": 0,
     "testError": 0
 };

@@ -1,0 +1,66 @@
+{
+     
+    "test1_get_truck_road_bridge_charge": {
+        "url": "http://192.168.3.75:30366/truck/road_bridge_charge/",
+        "params": "size=15&page=1",
+        "method": "get",
+        "assert": {
+            "code":200,
+            "message": "请求成功"
+        },
+        "desc": "测试查询路桥费记录列表"
+    },
+
+    "test2_post_truck_road_bridge_charge": {
+        "url": "http://192.168.3.75:30366/truck/road_bridge_charge/",
+        "json": {
+            "truck": 185,
+            "price": 100,
+            "maintain_time": "2020-12-14",
+            "remark": "续保",
+            "bill_no" :"1124"
+       
+          },
+        "method": "post",
+        "assert": {
+            "code":201,
+            "price": "100.00",
+            "maintain_time": "2020-12-14",
+            "remark": "续保",
+            "bill_no" :"1124",
+            "message": "请求成功"
+        },
+        "desc": "测试增加路桥费记录"
+    },
+
+    "test3_patch_truck_road_bridge_charge": {
+        "url": "http://192.168.3.75:30366/truck/road_bridge_charge/16/",
+        "json":{
+            "truck": 185,
+            "price": 100,
+            "maintain_time": "2020-12-14",
+            "remark": "修改路桥费记录"
+       
+          },
+        "method": "PATCH",
+        "assert": {
+            "code":200,
+            "price": "100.00",
+            "maintain_time": "2020-12-14",
+            "remark": "修改路桥费记录",
+            "message": "请求成功"
+        },
+        "desc": "测试修改路桥费记录"
+    },
+    "test4_delete_truck_road_bridge_charge": {
+        "url": "http://192.168.3.75:30366/truck/road_bridge_charge/16/",
+        
+        "method": "DELETE",
+        "assert": {
+            "code":204   
+        },
+        "desc": "测试删除路桥费记录"
+    }
+
+
+} 

@@ -32,7 +32,7 @@ class BackMysql(object):
                      " --single-transaction" + ">" + self.db_path + "/" +self.db + ".sql"+' --column-statistics=0'	                
             print(mysql_dump)
             out_dump = os.system(mysql_dump)	               
-            print ("数据库备份成功……")	        
+            print ("----数据库备份成功----")	        
         except Exception as e:	           
             print ("数据库备份失败：", e	)
 
@@ -43,7 +43,8 @@ class BackMysql(object):
                 self.password + " -h" + self.host + \
                 " " + self.db + "<" + self.db_path + "/" + self.db + ".sql"
             out_res = os.system(mysql_res)
-            print ("数据库还原成功……")	      
+    
+            print ("----数据库还原成功----")	      
         except Exception as e:	           
             print( "数据库还原失败：", e	)
 

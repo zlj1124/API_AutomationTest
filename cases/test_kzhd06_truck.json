@@ -1,0 +1,50 @@
+{
+     
+    "test1_get_truck": {
+        "url": "http://192.168.3.75:30366/truck/own_truck/",
+        "params": "size=999&page=1",
+        "method": "get",
+        "assert": {
+            "code":200,
+            "message": "请求成功"
+        },
+        "desc": "查询车辆列表"
+    },
+    
+ 
+    "test2_post_truck": {
+        "url": "http://192.168.3.75:30366/truck/own_truck/",
+        "data":{"truck_model":55,"plate_number":"云E9P6H5F","insurance_date":"2021-06-09","annual_audit_date": "2021-06-10",
+            "check_date": "2021-06-10"},
+       "files":{"truck_license_image":""},
+        "method": "post",
+        "assert": {
+            "code":201,
+            "message": "请求成功"
+        },
+        "desc": "新增车辆"
+    },
+   
+    "test3_patch_truck": {
+        "url": "http://192.168.3.75:30366/truck/own_truck/185/",
+        "json":{ "plate_number":"云E966H5F","insurance_date":"2021-06-09","annual_audit_date": "2021-06-10","check_date": "2021-06-10"},
+        "method": "PATCH",
+        "role":"partnerstaff",
+        "assert": {
+            "code":200,
+            "message": "请求成功"
+        },
+        "desc": "修改车辆信息"
+    },
+    "test4_delete_truck_": {
+        "url": "http://192.168.3.75:30366/truck/own_truck/185/",
+        
+        "method": "DELETE",
+        "assert": {
+            "code":204   
+        },
+        "desc": "测试删除车系"
+    }
+
+
+} 

@@ -1,0 +1,61 @@
+{
+     
+    "test1_get_truck_fine": {
+        "url": "http://192.168.3.75:30366/truck/fine/",
+        "params": "size=15&page=1",
+        "method": "get",
+        "assert": {
+            "code":200,
+            "message": "请求成功"
+        },
+        "desc": "测试查询罚款列表"
+    },
+
+    "test2_post_truck_fine": {
+        "url": "http://192.168.3.75:30366/truck/fine/",
+        "json": {
+            "truck": 185,
+            "price": 20,
+            "sub_score":3,
+            "maintain_time": "2020-12-14",
+            "reason": "测试罚款",
+            "site": "罚款地点"
+          },
+        "method": "post",
+        "assert": {
+            "code":201,
+            "reason": "测试罚款",
+            "site": "罚款地点",
+            "message": "请求成功"
+        },
+        "desc": "测试增加罚款"
+    },
+
+    "test3_patch_truck_fine": {
+        "url": "http://192.168.3.75:30366/truck/fine/24/",
+        "json":{
+            "truck": 185,
+            "reason": "测试修改罚款",
+            "remark": "备注"
+          },
+        "method": "PATCH",
+        "assert": {
+            "code":200,
+            "reason": "测试修改罚款",
+            "remark": "备注",
+            "message": "请求成功"
+        },
+        "desc": "测试修改罚款"
+    },
+    "test4_delete_truck_fine": {
+        "url": "http://192.168.3.75:30366/truck/fine/24/",
+        
+        "method": "DELETE",
+        "assert": {
+            "code":204   
+        },
+        "desc": "测试删除罚款"
+    }
+
+
+} 

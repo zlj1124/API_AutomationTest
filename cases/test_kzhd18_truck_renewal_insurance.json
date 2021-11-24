@@ -1,0 +1,66 @@
+{
+     
+    "test1_get_truck_renewal_insurance": {
+        "url": "http://192.168.3.75:30366/truck/renewal_insurance/",
+        "params": "size=15&page=1",
+        "method": "get",
+        "assert": {
+            "code":200,
+            "message": "请求成功"
+        },
+        "desc": "测试查询续保记录列表"
+    },
+
+    "test2_post_truck_renewal_insurance": {
+        "url": "http://192.168.3.75:30366/truck/renewal_insurance/",
+        "json": {
+            "truck": 185,
+            "price": 100,
+            "maintain_time": "2020-12-14",
+            "bill_no": "11111",
+            "site" :"重庆"
+       
+          },
+        "method": "post",
+        "assert": {
+            "code":201,
+            "price": "100.00",
+            "maintain_time": "2020-12-14",
+            "bill_no": "11111",
+            "site" :"重庆",
+            "message": "请求成功"
+        },
+        "desc": "测试增加续保记录"
+    },
+
+    "test3_patch_truck_renewal_insurance": {
+        "url": "http://192.168.3.75:30366/truck/renewal_insurance/22/",
+        "json":{
+            "truck": 185,
+            "price": 100,
+            "maintain_time": "2020-12-14",
+            "bill_no": "2222"
+       
+          },
+        "method": "PATCH",
+        "assert": {
+            "code":200,
+            "price": "100.00",
+            "maintain_time": "2020-12-14",
+            "bill_no": "2222",
+            "message": "请求成功"
+        },
+        "desc": "测试修改续保记录"
+    },
+    "test4_delete_truck_renewal_insurance": {
+        "url": "http://192.168.3.75:30366/truck/renewal_insurance/22/",
+        
+        "method": "DELETE",
+        "assert": {
+            "code":204   
+        },
+        "desc": "测试删除续保记录"
+    }
+
+
+} 

@@ -1,0 +1,63 @@
+{ 
+    "test1_price_mileage": {
+        "url": "http://192.168.3.75:30366/order/order/",
+        "json": {"customer":67,"ship_time":"2026-06-27 09:11:59","ship_address":66,"ship_name":"李","ship_phone":"15644725163","route_address_list":[{"route_order":0,"route_cost":"200.00","shipping_address":59,"name":"张","phone":"17702379979"}],"shipping_address":59,"shipping_name":"张","shipping_phone":"17702379979","required_shipping_time":"2021-06-25 09:12:47","price_method":{"price_type":1,"price_mileage":42,"cargo_mileage_truck_times":1,"cargo_mileage_number":"1742.7"},"cargo_type":1,"order_ext":{"settlement":"now","collection_price":"100.00","erp":"ERPERP","discount":0,"total_price":49781},"other_cost_list":[{"cost_name":"路桥费","cost_value":100}],"remark":"易碎","order_template":26},
+        "method": "post",
+        "role":"partnerstaff",
+        "assert": {
+            "code":201,
+            "message": "请求成功"
+        },
+        "desc": "按里程下单"
+    },
+   
+    "test2_price_truck_time": {
+        "url": "http://192.168.3.75:30366/order/order/",
+        "json":{"customer":67,"ship_time":"2026-06-27 09:08:49","ship_address":66,"ship_name":"李","ship_phone":"15644725163","shipping_address":59,"shipping_name":"张","shipping_phone":"17702379979","price_method":{"price_type":5,"price_truck_time":89,"cargo_model_truck_times":2,"cargo_mileage_number":"1742.7"},"cargo_type":1,"order_ext":{"settlement":"now","collection_price":100,"erp":"djasdlw","total_price":150},"other_cost_list":[{"cost_name":"路桥费","cost_value":50}],"remark":"贵重","truck_box_usage_type":1},
+        "method": "post",
+        "role":"partnerstaff",
+        "assert": {
+            "code":201,
+            "message": "请求成功"
+        },
+        "desc": "按车次计价下单"
+    },
+
+    "test3_cargo_number": {
+        "url": "http://192.168.3.75:30366/order/order/",
+        "json":{"customer":67,"ship_time":"2026-06-27 09:08:49","ship_address":66,"ship_name":"李","ship_phone":"15644725163","shipping_address":59,"shipping_name":"张","shipping_phone":"17702379979","price_method":{"price_type":2,"price_packages_number":54,"cargo_packages_number":2,"cargo_mileage_number":"1742.7"},"cargo_type":1,"order_ext":{"settlement":"now","collection_price":100,"erp":"djasdlw","total_price":150},"other_cost_list":[{"cost_name":"路桥费","cost_value":50}],"remark":"贵重","truck_box_usage_type":1},
+        "method": "post",
+        "role":"partnerstaff",
+        "assert": {
+            "code":201,
+            "message": "请求成功"
+        },
+        "desc": "按件数计价下单"
+    },
+
+    "test4_price_volume": {
+        "url": "http://192.168.3.75:30366/order/order/",
+        "json":{"customer":67,"ship_time":"2026-06-26 10:15:36","ship_address":66,"ship_name":"李","ship_phone":"15644725163","shipping_address":59,"shipping_name":"张","shipping_phone":"17702379979","price_method":{"price_type":3,"cargo_volume":21,"cargo_mileage_number":"1742.7","price_volume":36},"cargo_type":1,"order_ext":{"settlement":"now","total_price":1470},"other_cost_list":[{"cost_name":"路桥费","cost_value":0}],"truck_box_usage_type":1},
+        "method": "post",
+        "role":"partnerstaff",
+        "assert": {
+            "code":201,
+            "message": "请求成功"
+        },
+        "desc": "按方量下单"
+    },
+    "test5_price_volume": {
+        "url": "http://192.168.3.75:30366/order/order/",
+        "json":{"customer":67,"ship_time":"2026-06-26 10:15:36","ship_address":66,"ship_name":"李","ship_phone":"15644725163","shipping_address":59,"shipping_name":"张","shipping_phone":"17702379979","price_method":{"price_type":4,"cargo_weight":11,"cargo_mileage_number":"1742.7","price_weight":37},"cargo_type":1,"order_ext":{"settlement":"now","total_price":1470},"other_cost_list":[{"cost_name":"路桥费","cost_value":0}],"truck_box_usage_type":1},
+        "method": "post",
+        "role":"partnerstaff",
+        "assert": {
+            "code":201,
+            "message": "请求成功"
+        },
+        "desc": "按重量下单"
+    }
+   
+   
+
+} 

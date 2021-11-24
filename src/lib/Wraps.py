@@ -33,10 +33,12 @@ def test_case_runner(func):
 
 
                     else:
+                       
+                        
                         result=response.json()
                         result["code"]=response.status_code     #把状态码加到response
-                        logger.info("Result: {}".format(result))
-                        print("DetailResponse: {}".format(result))
+                        logger.info("返回response: {}".format(result))
+                     
                 
                     return func(
                         *args,

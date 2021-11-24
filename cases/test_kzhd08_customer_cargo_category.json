@@ -1,0 +1,59 @@
+{
+     
+    "test1_get_category": {
+        "url": "http://192.168.3.75:30366/customer/cargo_category/",
+        "params": "size=15&page=1",
+        "method": "get",
+        "assert": {
+            "code":200,
+            "message": "请求成功"
+        },
+        "desc": "测试查询计价货品列表"
+    },
+
+    "test2_post_category": {
+        "url": "http://192.168.3.75:30366/customer/cargo_category/",
+        "json": {
+            "customer": 67,
+            "cargo_name": "七喜",
+            "start_count": 10
+          },
+        "method": "post",
+        "assert": {
+            "code":201,
+            "cargo_name":"七喜",
+            "start_count": 10,
+            "message": "请求成功"
+        },
+        "desc": "测试增加计价货品"
+    },
+
+    "test3_patch_category": {
+        "url": "http://192.168.3.75:30366/customer/cargo_category/57/",
+        "json":{
+            "customer": 67,
+            "cargo_name": "修改香蕉",
+            "start_count": 15
+          },
+        "method": "PATCH",
+        "role":"partnerstaff",
+        "assert": {
+            "code":200,
+            "cargo_name": "修改香蕉",
+            "start_count": 15,
+            "message": "请求成功"
+        },
+        "desc": "测试修改计价货品"
+    },
+    "test4_delete_category": {
+        "url": "http://192.168.3.75:30366/customer/cargo_category/57/",
+        
+        "method": "DELETE",
+        "assert": {
+            "code":204   
+        },
+        "desc": "测试删除计价货品"
+    }
+
+
+} 

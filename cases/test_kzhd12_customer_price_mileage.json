@@ -1,0 +1,67 @@
+{
+     
+    "test1_get_price_mileage": {
+        "url": "http://192.168.3.75:30366/customer/price_mileage/",
+        "params": "size=15&page=1",
+        "method": "get",
+        "assert": {
+            "code":200,
+            "message": "请求成功"
+        },
+        "desc": "测试查询里程计价列表"
+    },
+
+    "test2_post_price_mileage": {
+        "url": "http://192.168.3.75:30366/customer/price_mileage/",
+        "json": {
+            "customer": 67,
+            "truck_box_usage_type": 1,
+            "crate_length": 18,
+            "load_capacity": 120,
+            "start_mileage": 10,
+            "start_price": "30.00",
+            "extra_price": "20.00"
+          },
+        "method": "post",
+        "assert": {
+            "code":201,
+            "start_price": "30.00",
+            "extra_price": "20.00",
+            "message": "请求成功"
+        },
+        "desc": "测试增加里程计价"
+    },
+
+    "test3_patch_price_mileage": {
+        "url": "http://192.168.3.75:30366/customer/price_mileage/42/",
+        "json":{
+            "customer": 67,
+            "truck_box_usage_type": 1,
+            "crate_length": "1",
+            "load_capacity": 2,
+            "start_mileage": 2,
+            "start_price": "2",
+            "extra_price": "3"
+          },
+        "method": "PATCH",
+        "role":"partnerstaff",
+        "assert": {
+            "code":200,
+            "start_price": "2.00",
+            "extra_price": "3.00",
+            "message": "请求成功"
+        },
+        "desc": "测试修改里程计价"
+    },
+    "test4_delete_price_mileage": {
+        "url": "http://192.168.3.75:30366/customer/price_mileage/42/",
+        
+        "method": "DELETE",
+        "assert": {
+            "code":204   
+        },
+        "desc": "测试删除里程计价"
+    }
+
+
+} 

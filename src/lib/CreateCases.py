@@ -30,6 +30,7 @@ class FileMeta(config.GetDictParam):
         self.head = self.headers.read()
         self.content = open(config.CONTENT_TEMPLATE_PATH, encoding='utf-8')
         self.cont = self.content.read()
+       
         return self
 
     def make_headers(self, class_name: str, func_name, desc: str) -> None:
@@ -93,6 +94,7 @@ class CreateCase:
                 obj.body['methods_name'],
                 obj.body['desc'])
             data.append(obj.body)
+    
 
     def __iter__(self) -> iter:
         return iter(self.data)

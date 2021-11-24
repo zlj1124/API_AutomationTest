@@ -1,0 +1,63 @@
+{
+     
+    "test1_get_employdriver": {
+        "url": "http://192.168.3.75:30366/driver/employ_driver/",
+        "params": "size=15&page=1",
+        "method": "get",
+        "role":"partnerstaff",
+        "assert": {
+            "code":200,
+            "message": "请求成功"
+        },
+        "desc": "查询自有司机列表"
+    },
+
+    "test2_get_ubind_employdriver": {
+        "url": "http://192.168.3.75:30366/driver/employ_driver/",
+        "params": "bind=false",
+        "method": "get",
+        "role":"partnerstaff",
+        "assert": {
+            "code":200,
+            "message": "请求成功"
+        },
+        "desc": "筛选未绑定的自有司机"
+    },
+
+    "test3_post_employdriver": {
+        "url": "http://192.168.3.75:30366/driver/employ_driver/",
+        "json": {"name":"测试新增自有司机","phone":"13245462711","citizen_id":"500113191811157611","hire_date":"2020-11-04"},
+        "method": "post",
+        "role":"partnerstaff",
+        "assert": {
+            "code":201,
+            "name":"测试新增自有司机",
+            "phone": "13245462711",
+            "citizen_id":"500113191811157611",
+            "message": "请求成功"
+        },
+        "desc": "新增自有司机"
+    },
+
+    "test4_patch_employdriver": {
+        "url": "http://192.168.3.75:30366/driver/employ_driver/328/",
+        "json":{"name":"修改","citizen_id":"500113191811157647","hire_date":"2020-10-16","truck": 183},
+        "method": "PATCH",
+        "role":"partnerstaff",
+        "assert": {
+            "code":200,
+            "name":"修改",
+            "message": "请求成功"
+        },
+        "desc": "修改自有司机"
+    },
+    "test5_delete_employdriver": {
+        "url": "http://192.168.3.75:30366/driver/employ_driver/328/",
+        "method": "DELETE",
+        "role":"partnerstaff",
+        "assert": {
+            "code":204   
+        },
+        "desc": "删除自有司机"
+    }
+} 

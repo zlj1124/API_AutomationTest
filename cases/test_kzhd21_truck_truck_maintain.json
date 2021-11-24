@@ -1,0 +1,63 @@
+{
+     
+    "test1_get_truck_truck_maintain": {
+        "url": "http://192.168.3.75:30366/truck/truck_maintain/",
+        "params": "size=15&page=1",
+        "method": "get",
+        "assert": {
+            "code":200,
+            "message": "请求成功"
+        },
+        "desc": "测试查询保养记录列表"
+    },
+
+    "test2_post_truck_truck_maintain": {
+        "url": "http://192.168.3.75:30366/truck/truck_maintain/",
+        "json": {
+            "truck": 185,
+            "price": 100,
+            "kilometer":20,
+            "maintain_time": "2020-12-14",
+            "site": "4s"
+          },
+        "method": "post",
+        "assert": {
+            "code":201,
+            "price": "100.00",
+            "maintain_time": "2020-12-14",
+            "site": "4s",
+            "message": "请求成功"
+        },
+        "desc": "测试增加保养记录"
+    },
+
+    "test3_patch_truck_truck_maintain": {
+        "url": "http://192.168.3.75:30366/truck/truck_maintain/28/",
+        "json":{
+            "truck": 185,
+            "price": 100,
+            "maintain_time": "2020-12-14",
+            "site": "4s" 
+          },
+        "method": "PATCH",
+        "assert": {
+            "code":200,
+            "price": "100.00",
+            "maintain_time": "2020-12-14",
+            "site": "4s",
+            "message": "请求成功"
+        },
+        "desc": "测试修改保养记录"
+    },
+    "test4_delete_truck_truck_maintain": {
+        "url": "http://192.168.3.75:30366/truck/truck_maintain/28/",
+        
+        "method": "DELETE",
+        "assert": {
+            "code":204   
+        },
+        "desc": "测试删除保养记录"
+    }
+
+
+} 

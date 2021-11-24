@@ -4,12 +4,7 @@ Author: zlj
 Date: 2020-11-27 16:23:27
 '''
 # -*- coding: utf-8 -*-
-"""
-@File: run
-@Author: Ray
-@: 2018-01-29 15:14:46
-@Version: 1.0
-"""
+
 import os
 import unittest
 import click
@@ -28,6 +23,7 @@ bt=BackMysql()
         help="generator report in path")
 def run(cases, pattern, report):
     bt.backup_data()   #备份数据库 
+    
     test_suite = unittest.defaultTestLoader.discover(cases, pattern=pattern)
     result = BeautifulReport(test_suite)
     result.report(filename='测试报告', description='快召货的接口测试报告', log_path=report)
@@ -43,7 +39,6 @@ def run(cases, pattern, report):
 #     # 发送邮件
 #     send=Mail.SendMail()
 #     send.sendMail()
-
 
 
 

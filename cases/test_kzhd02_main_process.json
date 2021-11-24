@@ -1,0 +1,102 @@
+{ 
+    "test1_template_order": {
+        "url": "http://192.168.3.75:30366/order/order/",
+        "json": {"customer":67,"ship_time":"2026-06-27 09:11:59","ship_address":66,"ship_name":"李","ship_phone":"15644725163","route_address_list":[{"route_order":0,"route_cost":"200.00","shipping_address":59,"name":"张","phone":"17702379979"}],"shipping_address":59,"shipping_name":"张","shipping_phone":"17702379979","required_shipping_time":"2021-06-25 09:12:47","price_method":{"price_type":1,"price_mileage":42,"cargo_mileage_truck_times":1,"cargo_mileage_number":"1742.7"},"cargo_type":1,"order_ext":{"settlement":"now","collection_price":"100.00","erp":"ERPERP","discount":0,"total_price":49781},"other_cost_list":[{"cost_name":"路桥费","cost_value":100}],"remark":"易碎","order_template":26},
+        "method": "post",
+        "role":"partnerstaff",
+        "assert": {
+            "code":201,
+            "message": "请求成功"
+        },
+        "desc": "模板下单"
+    },
+   
+    "test2_assign_order": {
+        "url": "http://192.168.3.75:30366/order/order/612/order_flow_assign/",
+        "json": {"assign_leader":326,"assign_members":[326]},
+        "method": "PATCH",
+        "role":"partnerstaff",
+        "assert": {
+            "code":200,
+            "message": "指派成功"
+        },
+        "desc": "指派自有司机"
+    },
+
+    "test3_accept_order": {
+        "url": "http://192.168.3.75:30366/order/order/612/order_flow_accept/",
+        "method": "PATCH",
+        "role":"driver",
+        "assert": {
+            "code":200
+            
+        },
+        "desc": "自有司机接单"
+    },
+
+    "test4_pickup_order": {
+        "url": "http://192.168.3.75:30366/order/order/612/order_flow_pick_up/",
+        "method": "PATCH",
+        "role":"driver",
+        "assert": {
+            "code":200
+            
+        },
+        "desc": "自有司机接货"
+    },
+
+    "test5_delivery_order": {
+        "url": "http://192.168.3.75:30366/order/order/612/order_flow_delivery/",
+        "method": "PATCH",
+        "role":"driver",
+        "assert": {
+            "code":200
+            
+        },
+        "desc": "自有司机送货"
+    },
+    "test6_service_order": {
+        "url": "http://192.168.3.75:30366/order/order/612/order_flow_service/",
+        "method": "PATCH",
+        "role":"customerstaff",
+        "assert": {
+            "code":200
+            
+        },
+        "desc": "货主确认司机送达"
+    },
+    "test7_service_order": {
+        "url": "http://192.168.3.75:30366/order/order/612/order_flow_receipt/",
+        "method": "PATCH",
+        "role":"driver",
+        "files":{"receipt_image":""},
+        "assert": {
+            "code":200
+            
+        },
+        "desc": "自有司机上传回单"
+    },
+
+    "test8_complete_order": {
+        "url": "http://192.168.3.75:30366/order/order/612/order_flow_complete/",
+        "method": "PATCH",
+        "role":"partnerstaff",
+        "assert": {
+            "code":200
+        },
+        "desc": "物流商确认完成"
+    },
+
+    "test9_evaluate_order": {
+        "url": "http://192.168.3.75:30366/order/order/612/order_evaluate/",
+        "method": "PATCH",
+        "json": {"integrity_point": 2,"speed_point": 2,"service_point": 2},
+        "role":"customerstaff",
+        "assert": {
+            "code":200
+        },
+        "desc": "货主评价货单"
+    }
+
+ 
+} 

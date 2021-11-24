@@ -1,0 +1,85 @@
+{ 
+    "test1_template_order": {
+        "url": "http://192.168.3.75:30366/order/order/",
+        "json":{"customer":67,"ship_time":"2026-06-27 09:08:49","ship_address":66,"ship_name":"李","ship_phone":"15644725163","shipping_address":59,"shipping_name":"张","shipping_phone":"17702379979","price_method":{"price_type":5,"price_truck_time":89,"cargo_model_truck_times":2,"cargo_mileage_number":"1742.7"},"cargo_type":1,"order_ext":{"settlement":"now","collection_price":100,"erp":"djasdlw","total_price":150},"other_cost_list":[{"cost_name":"路桥费","cost_value":50}],"remark":"贵重","truck_box_usage_type":1},
+        "method": "post",
+        "role":"partnerstaff",
+        "assert": {
+            "code":201,
+            "message": "请求成功"
+        },
+        "desc": "按车次计价下单"
+    },
+   
+    "test2_assign_afforder": {
+        "url": "http://192.168.3.75:30366/order/order/613/order_flow_assign/",
+        "json": {"assign_leader":327,"assign_members": [ "327"], "assign_price":200},
+        "method": "PATCH",
+        "role":"partnerstaff",
+        "assert": {
+            "code":200,
+            "message": "指派成功"
+        },
+        "desc": "指派挂靠司机"
+    },
+    
+    "test3_bargain_order": {
+        "url": "http://192.168.3.75:30366/order/order/613/order_flow_bargain/",
+        "json": {"bargain_price": "300"},
+        "method": "PATCH",
+        "role":"affdriver",
+        "assert": {
+            "code":200
+            
+        },
+        "desc": "挂靠司机议价"
+    },
+
+    "test4_acceptbargain_order": {
+        "url": "http://192.168.3.75:30366/order/order/613/order_flow_accept_bargain/",
+        "method": "PATCH",
+        "role":"partnerstaff",
+        "assert": {
+            "code":200
+            
+        },
+        "desc": "物流商接受议价货单"
+    },
+ 
+    "test5_pickup_order": {
+        "url": "http://192.168.3.75:30366/order/order/613/order_flow_pick_up/",
+        "method": "PATCH",
+        "role":"affdriver",
+        "assert": {
+            "code":200
+            
+        },
+        "desc": "挂靠司机接货"
+    },
+
+    "test6_delivery_order": {
+        "url": "http://192.168.3.75:30366/order/order/613/order_flow_delivery/",
+        "method": "PATCH",
+        "role":"affdriver",
+        "assert": {
+            "code":200
+            
+        },
+        "desc": "挂靠司机送货"
+    },
+
+    "test7_service_orderd": {
+        "url": "http://192.168.3.75:30366/order/order/613/order_flow_service/",
+        "method": "PATCH",
+        "role":"customerstaff",
+        "assert": {
+            "code":200
+            
+        },
+        "desc": "货主确认司机送达"
+    }
+
+  
+
+
+} 

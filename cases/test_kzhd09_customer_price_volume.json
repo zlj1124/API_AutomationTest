@@ -1,0 +1,75 @@
+{
+     
+    "test1_get_price_volume": {
+        "url": "http://192.168.3.75:30366/customer/price_volume/",
+        "params": "size=15&page=1",
+        "method": "get",
+        "assert": {
+            "code":200,
+            "message": "请求成功"
+        },
+        "desc": "测试查询方量计价列表"
+    },
+
+    "test2_post_price_volume": {
+        "url": "http://192.168.3.75:30366/customer/price_volume/",
+        "json": {
+            "customer": 67,
+            "shipping_forth_receive_cost": 440,
+            "ship_address": 66,
+            "shipping_area": {
+                "partner": 3,
+                "customer":67,
+                "province": "500000",
+                "city": "500100",
+                "county": "500112",
+                "circle": "大竹林",
+                "shipping_area_type": 1
+              }
+          },
+        "method": "post",
+        "assert": {
+            "code":201,
+            "shipping_forth_receive_cost":"440.00",
+            "message": "请求成功"
+        },
+        "desc": "测试增加方量计价"
+    },
+
+    "test3_patch_price_volume": {
+        "url": "http://192.168.3.75:30366/customer/price_volume/36/",
+        "json":{
+            "customer": 67,
+            "shipping_area": {
+                "partner": 3,
+                "customer":67,
+                "province": "500000",
+                "city": "500100",
+                "county": "500112",
+                "circle": "大竹林",
+                "shipping_area_type": 1
+              },
+            "ship_address":66,
+            "shipping_forth_receive_cost":"10.00"
+          },
+        "method": "PATCH",
+        "role":"partnerstaff",
+        "assert": {
+            "code":200,
+            "shipping_forth_receive_cost":"10.00",
+            "message": "请求成功"
+        },
+        "desc": "测试修改方量计价"
+    },
+    "test4_delete_price_volume": {
+        "url": "http://192.168.3.75:30366/customer/price_volume/36/",
+        
+        "method": "DELETE",
+        "assert": {
+            "code":204   
+        },
+        "desc": "测试删除方量计价"
+    }
+
+
+} 

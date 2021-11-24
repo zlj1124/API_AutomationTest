@@ -1,0 +1,25 @@
+{
+    "test_login": {
+        "url": "http://192.168.3.75:30366/auth/login/",
+        "json": {"username": "13874562154", "password": "13874562154","role":"partnerstaff"},
+        "affdriver_json": {"username": "16684563215", "password": "16684563215","role":"driver"},
+        "driver_json": {"username": "17763598265", "password": "17763598265","role":"driver"},
+        "partner_json": {"username": "13874562154", "password": "13874562154","role":"partnerstaff"},
+        "customer_json": {"username": "13874562154", "password": "13874562154","role":"customerstaff"},
+        "method": "post",
+        
+        "assert": {
+            "code":200,
+            "role": "partnerstaff",
+            "username": "13874562154"
+        },
+      
+        "desc": "快召物流商登录"
+    }
+
+   
+   
+
+
+ 
+}

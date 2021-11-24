@@ -1,3 +1,8 @@
+'''
+Descripttion: 
+Author: zlj
+Date: 2020-11-27 16:23:27
+'''
 """
 @Version: 1.0
 @Project: doraemon_recode
@@ -48,6 +53,7 @@ class CasesManager:
         for file in self.get_all_cases():
             class_name = file.split('.')[0].title().replace("_", '')
             all_cases_enum.append({class_name: self.read_cases_json(file)})
+    
         return all_cases_enum
 
 
@@ -56,6 +62,8 @@ class CasesContainer:
         self.body = body
 
     def __repr__(self) -> str:
+     
+  
         return 'CasesContainer<{}:{}>'.format(
             self.body.get('class_name'),
             self.body.get('methods_name')

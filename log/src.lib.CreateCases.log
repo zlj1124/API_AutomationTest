@@ -1,0 +1,30 @@
+2021-07-05 15:30:08,286 CreateCases.py[line:33] INFO enter# -*- coding: utf-8 -*-
+
+""" 测试工具自动生成的case """
+
+import unittest
+from src.lib import Wraps
+
+
+class {}(unittest.TestCase):
+    """这是{}接口测试用例"""
+
+    def setUp(self):
+        """ test setup function """
+    
+
+    def tearDown(self):
+        """ test case tearDown function """
+    
+
+    @Wraps.test_case_runner
+    @Wraps.test_case_parse
+    def {}(self, *args, **kwargs):
+        """{}"""
+        response = kwargs.get('response')
+        print("Response :", response)    
+        print("AssertInfo: ", kwargs.get('exec_text'))
+    
+        exec(kwargs.get('exec_text'))
+
+2021-07-05 15:30:08,287 CreateCases.py[line:97] INFO [{'class_name': 'TestKzhd1Login', 'methods_name': 'test_login', 'desc': '快召物流商登录', 'body': {'url': 'http://192.168.3.75:30366/auth/login/', 'json': {'username': '13874562154', 'password': '13874562154', 'role': 'partnerstaff'}, 'affdriver_json': {'username': '16684563215', 'password': '16684563215', 'role': 'driver'}, 'driver_json': {'username': '17763598265', 'password': '17763598265', 'role': 'driver'}, 'partner_json': {'username': '13874562154', 'password': '13874562154', 'role': 'partnerstaff'}, 'customer_json': {'username': '13874562154', 'password': '13874562154', 'role': 'customerstaff'}, 'method': 'post', 'assert': {'code': 200, 'role': 'partnerstaff', 'username': '13874562154'}, 'desc': '快召物流商登录'}}]

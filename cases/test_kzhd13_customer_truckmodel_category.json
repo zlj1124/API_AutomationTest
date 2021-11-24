@@ -1,0 +1,59 @@
+{
+     
+    "test1_get_truck_model_category": {
+        "url": "http://192.168.3.75:30366/customer/truck_model_category/",
+        "params": "size=15&page=1",
+        "method": "get",
+        "assert": {
+            "code":200,
+            "message": "请求成功"
+        },
+        "desc": "测试查询计价车型列表"
+    },
+
+    "test2_post_truck_model_category": {
+        "url": "http://192.168.3.75:30366/customer/truck_model_category/",
+        "json": {
+            "customer": 67,
+            "truck_length": 3,
+            "truck_weight": 7
+          },
+        "method": "post",
+        "assert": {
+            "code":201,
+            "truck_length": 3,
+            "truck_weight": 7,
+            "message": "请求成功"
+        },
+        "desc": "测试增加计价车型"
+    },
+
+    "test3_patch_truck_model_category": {
+        "url": "http://192.168.3.75:30366/customer/truck_model_category/41/",
+        "json":{
+            "customer": 67,
+            "truck_length": 5,
+            "truck_weight": 2
+          },
+        "method": "PATCH",
+        "role":"partnerstaff",
+        "assert": {
+            "code":200,
+            "truck_length": 5,
+            "truck_weight": 2,
+            "message": "请求成功"
+        },
+        "desc": "测试修改车型计价"
+    },
+    "test4_delete_truck_model_category": {
+        "url": "http://192.168.3.75:30366/customer/truck_model_category/41/",
+        
+        "method": "DELETE",
+        "assert": {
+            "code":204   
+        },
+        "desc": "测试删除车型计价"
+    }
+
+
+} 

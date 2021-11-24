@@ -1,3 +1,4 @@
+
 """
 @Version: 1.0
 @Project: News
@@ -50,9 +51,9 @@ class LogHandler(logging.Logger):
         :return:
         """
         file_name = os.path.join(LOG_PATH, '{name}.log'.format(name=self.name))
-        # 设置日志回滚, 保存在log目录, 一天保存一个文件, 保留15天
+        # 设置日志回滚, 保存在log目录, 一天保存一个文件, 保留7天
         file_handler = TimedRotatingFileHandler(filename=file_name, when='D', interval=1,
-                                                backupCount=15, encoding='utf-8')
+                                                backupCount=7, encoding='utf-8')
         file_handler.suffix = '%Y%m%d.log'
         if not level:
             file_handler.setLevel(self.level)
